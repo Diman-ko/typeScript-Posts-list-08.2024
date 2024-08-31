@@ -1,6 +1,6 @@
 import {el, setChildren} from 'redom';
 
-function PostPage(id) {
+function postPage(id) {
     const body = el('p', "Loading...");// параграф с контентом лоудинг
 
     fetch(`https://gorest.co.in/public/v2/posts/${id}`)
@@ -27,7 +27,7 @@ function PostPage(id) {
 
 function postListPage() {
     const list = el('ul', el('li', "Loading..."));// параграф с контентом лоудинг
-    fetch('https://gorest.co.in/public/v2/posts')
+    fetch(`https://gorest.co.in/public/v2/posts`)
         .then(async (res) => {
         const data = await res.json();
 
